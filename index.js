@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 
 app.post('/', async (req, res) => {
     console.log(req.body)
-    const response = await ai(req.body)
+    const response = await ai(req.body.prompt)
     res.json(response)
 })
 
